@@ -1,0 +1,2 @@
+include ':app', ':xdanmuku'
+rootProject.name='JxunOSVideo'

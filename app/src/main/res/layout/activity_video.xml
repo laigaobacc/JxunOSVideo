@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.VideoActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <com.dueeeke.videoplayer.player.VideoView
+            android:id="@+id/player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.orzangleli.xdanmuku.DanmuContainerView
+            android:id="@+id/danmuContainerView"
+            android:layout_width="match_parent"
+            android:layout_height="240dp" />
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="pdf文档"
+                android:textSize="26sp"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="ppt文档"
+                android:textSize="26sp"
+                />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_danmu"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="弹幕"
+                android:textSize="26sp"
+                android:imeOptions="flagNoExtractUi"
+                />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="send" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/iv_pianyi"
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:background="@color/red"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/wengdang_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</LinearLayout>
